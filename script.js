@@ -3,7 +3,7 @@ var InitialCount = -1;
 
 
 const deleteProducts = async() => {
-    url = 'https://automaticbilling.herokuapp.com/product';
+    url = 'https://coutinho2302.github.io/Site/';
 
     let res = await axios.get(url);
     responseText = res.data;
@@ -22,7 +22,7 @@ const deleteProducts = async() => {
 }
 
 const loadProducts = async() => {
-    url = 'https://automaticbilling.herokuapp.com/product';
+    url = 'https://coutinho2302.github.io/Site/';
 
     let res = await axios.get(url);
     responseText = await res.data;
@@ -79,9 +79,9 @@ const loadProducts = async() => {
 var checkout = async() => {
     document.getElementById('2').innerHTML = "<span class='loader-16' style='margin-left: 44%;'></span>"
     var payable = 0;
-    url = 'https://automaticbilling.herokuapp.com/product';
+     = 'https://automaticbilling.herokuapp.com/product';
 
-    let res = await axios.get(url);
+    let res = await axios.get();
     responseText = await res.data;
     products = responseText;
 
@@ -89,14 +89,14 @@ var checkout = async() => {
         payable = payable + parseFloat(product.payable);
     }
 
-    var url = "https://api.scanova.io/v2/qrcode/text?data=upi%3A%2F%2Fpay%3Fpa%3Dshebinjosejacob2014%40oksbi%26pn%3DTXN965654954321%26tn%3DA%26am%3D4%26cu%3DINR%26url%3Dhttps%3A%2F%2Fcoderscafe.cf%2F&size=l&error_correction=M&data_pattern=RECT&eye_pattern=TLBR_LEAF&data_gradient_style=Radial&data_gradient_start_color=%2302c8db&data_gradient_end_color=%2302c8db&eye_color_inner=%2302c8db&eye_color_outer=%2302c8db&background_color=%23ecf0f3&logo.size=15&logo.excavated=true&logo.angle=0&poster.left=50&poster.top=50&poster.size=40&poster.eyeshape=ROUND_RECT&poster.dataPattern=ROUND&format=png&apikey=fmdtvmmwccekndkpalsltpzhvfmnpsmuhrvhpxzf";
+    var  = "https://api.scanova.io/v2/qrcode/text?data=upi%3A%2F%2Fpay%3Fpa%3Dshebinjosejacob2014%40oksbi%26pn%3DTXN965654954321%26tn%3DA%26am%3D4%26cu%3DINR%26%3Dhttps%3A%2F%2Fcoderscafe.cf%2F&size=l&error_correction=M&data_pattern=RECT&eye_pattern=TLBR_LEAF&data_gradient_style=Radial&data_gradient_start_color=%2302c8db&data_gradient_end_color=%2302c8db&eye_color_inner=%2302c8db&eye_color_outer=%2302c8db&background_color=%23ecf0f3&logo.size=15&logo.excavated=true&logo.angle=0&poster.left=50&poster.top=50&poster.size=40&poster.eyeshape=ROUND_RECT&poster.dataPattern=ROUND&format=png&apikey=fmdtvmmwccekndkpalsltpzhvfmnpsmuhrvhpxzf";
 
-    await fetch(url)
+    await fetch()
         .then(function(data) {
             return data.blob();
         })
         .then(function(img) {
-            var image = URL.createObjectURL(img);
+            var image = .createObject(img);
             $("#home").css("display", "none");
             $("#final").css("display", "none");
             window.scroll({
@@ -114,6 +114,6 @@ var checkout = async() => {
             },10000);
         
 
-    // window.location.href = "upi://pay?pa=shebinjosejacob2014@oksbi&pn=TXN9656549238&tn=A&am=1&cu=INR&url=https://assettracker.cf/"*/
+    // window.location.href = "upi://pay?pa=shebinjosejacob2014@oksbi&pn=TXN9656549238&tn=A&am=1&cu=INR&=https://assettracker.cf/"*/
     deleteProducts();
 }
